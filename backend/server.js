@@ -80,8 +80,13 @@ app.post("/webhook", (req, res) => {
 });
 
 // Trello Webhook verification (Trello checks this when creating webhook)
+app.head("/webhook", (req, res) => {
+  console.log("✅ Webhook HEAD verification");
+  res.sendStatus(200);
+});
+
 app.get("/webhook", (req, res) => {
-  console.log("✅ Webhook verification:", req.query);
+  console.log("✅ Webhook GET verification:", req.query);
   res.send(req.query["challenge"] || "Webhook verified");
 });
 
