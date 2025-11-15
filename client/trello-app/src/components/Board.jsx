@@ -11,7 +11,7 @@ const Board = ({ board }) => {
 
   useEffect(() => {
     // Connect to Socket.IO
-    const newSocket = io('http://localhost:5000');
+    const newSocket = io('https://trello-task-u0kk.onrender.com');
     setSocket(newSocket);
 
     newSocket.on('connect', () => {

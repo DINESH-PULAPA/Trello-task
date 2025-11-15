@@ -27,7 +27,7 @@ function App() {
       }
     } catch (error) {
       console.error('Error loading boards:', error);
-      alert('Failed to load boards. Make sure the backend is running on http://localhost:5000');
+      alert('Failed to load boards. Please check your connection.');
     } finally {
       setLoading(false);
     }

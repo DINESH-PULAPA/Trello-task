@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://trello-task-u0kk.onrender.com/api';
 
 // Board API
 export const getAllBoards = async () => {
